@@ -17,6 +17,8 @@ const knowledgebaseView = document.getElementById('knowledgebase-view');
 const automationView = document.getElementById('automation-view');
 const reviewView = document.getElementById('review-view');
 const activeView = document.getElementById('active-view');
+const serviceConfigModal = document.getElementById('service-config-modal');
+
 
 // Tracking for Stepper
 let maxStepReached = 1;
@@ -53,6 +55,8 @@ const addFaqBtn = document.getElementById('add-faq-btn');
 const faqContainer = document.getElementById('faq-container');
 const goToDashboardBtn = document.getElementById('go-to-dashboard-btn');
 const onboardAnotherLink = document.getElementById('onboard-another-link');
+const modalContinueBtn = document.getElementById('modal-continue-btn');
+
 
 const einInput = document.getElementById('ein-input') as HTMLInputElement;
 
@@ -215,8 +219,14 @@ continueServiceSetupBtn?.addEventListener('click', () => {
 });
 
 configureReservation?.addEventListener('click', () => {
+  serviceConfigModal?.classList.remove('hidden');
+});
+
+modalContinueBtn?.addEventListener('click', () => {
+  serviceConfigModal?.classList.add('hidden');
   showView('persona-view');
 });
+
 
 personaForm?.addEventListener('submit', (e) => {
   e.preventDefault();
@@ -416,21 +426,29 @@ checkboxes?.forEach(cb => {
 
 // Persona Card Selection
 const personaCards = document.querySelectorAll('.persona-card');
+const genderBtns = document.querySelectorAll('.gender-btn');
+
+function activatePersona(card: HTMLElement) {
+  personaCards.forEach(c => c.classList.remove('selected'));
+  genderBtns.forEach(b => b.classList.remove('active'));
+
+  card.classList.add('selected');
+  const btn = card.querySelector('.gender-btn');
+  btn?.classList.add('active');
+}
+
 personaCards.forEach(card => {
   card.addEventListener('click', () => {
-    personaCards.forEach(c => c.classList.remove('selected'));
-    card.classList.add('selected');
+    activatePersona(card as HTMLElement);
   });
 });
 
 // Gender Toggle
-const genderBtns = document.querySelectorAll('.gender-btn');
 genderBtns.forEach(btn => {
   btn.addEventListener('click', (e) => {
     e.stopPropagation();
-    const parent = btn.parentElement;
-    parent?.querySelectorAll('.gender-btn').forEach(b => b.classList.remove('active'));
-    btn.classList.add('active');
+    const card = btn.closest('.persona-card');
+    if (card) activatePersona(card as HTMLElement);
   });
 });
 
@@ -449,6 +467,15 @@ einInput?.addEventListener('input', (e) => {
     value = value.substring(0, 2) + '-' + value.substring(2, 9);
   }
   (e.target as HTMLInputElement).value = value;
+});
+
+// Integration Card Selection
+const toastCard = document.getElementById('toast-card');
+const toastGuidSection = document.getElementById('toast-guid-section');
+
+toastCard?.addEventListener('click', () => {
+  toastCard.classList.toggle('active');
+  toastGuidSection?.classList.toggle('hidden');
 });
 
 // Initial Step Visual Update
