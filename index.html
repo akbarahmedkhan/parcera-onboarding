@@ -30,7 +30,7 @@
 
       <!-- Login View -->
       <div id="login-view" class="login-card">
-        <h1 style="margin-bottom: 2.5rem; white-space: nowrap; font-size: 1.35rem;">Hey, Welcome back and let's start!
+        <h1 style="margin-bottom: 2.5rem; white-space: nowrap; font-size: 1.35rem;">Welcome back. Let's get started!
         </h1>
 
         <form id="login-form">
@@ -223,16 +223,6 @@
           <input type="text" placeholder="e.g., Downtown HQ" />
         </div>
 
-        <div class="multi-location-card">
-          <div class="multi-location-info">
-            <h4>Is this a Multi-Location Chain?</h4>
-            <p>Enable if you operate multiple restaurant locations</p>
-          </div>
-          <label class="switch">
-            <input type="checkbox">
-            <span class="slider"></span>
-          </label>
-        </div>
 
         <div class="btn-container right">
           <button id="add-location-btn" class="btn-primary" style="width: auto; padding: 0.75rem 2rem;">Add
@@ -604,7 +594,7 @@
           <div class="form-group">
             <label>Custom Greeting</label>
             <textarea
-              placeholder="Hello! Thanks for calling [Restaurant Name]. I'm your AI assistant. How can I help you today?"></textarea>
+              placeholder="Hello! Thanks for calling {Restaurant Name}. I'm Alice. How can I help you today?"></textarea>
             <p class="input-help-text">This greeting will be spoken when customers first interact with your AI
               assistant
             </p>
@@ -856,107 +846,107 @@
             </svg>
             Operating Hours
           </div>
-        </div>
 
-        <div class="kb-accordion" style="margin-bottom: 2rem;">
-          <div class="accordion-header">
-            <span>View & Edit Hours</span>
-            <svg class="chevron-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-              stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <polyline points="6 9 12 15 18 9"></polyline>
-            </svg>
-          </div>
-          <div class="accordion-content hidden">
-            <div class="hours-grid">
-              <!-- Monday -->
-              <div class="hour-row">
-                <span class="day-label">Monday</span>
-                <label class="switch" style="width: 36px; height: 18px;">
-                  <input type="checkbox" checked>
-                  <span class="slider" style="border-radius: 18px;"></span>
-                </label>
-                <div class="time-range">
-                  <input type="text" class="time-input" placeholder="09:00 AM" />
-                  <span class="time-separator">to</span>
-                  <input type="text" class="time-input" placeholder="10:00 PM" />
+          <div class="kb-accordion">
+            <div class="accordion-header">
+              <span>View & Edit Hours</span>
+              <svg class="chevron-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="6 9 12 15 18 9"></polyline>
+              </svg>
+            </div>
+            <div class="accordion-content hidden">
+              <div class="hours-grid">
+                <!-- Monday -->
+                <div class="hour-row">
+                  <span class="day-label">Monday</span>
+                  <label class="switch" style="width: 36px; height: 18px;">
+                    <input type="checkbox" checked>
+                    <span class="slider" style="border-radius: 18px;"></span>
+                  </label>
+                  <div class="time-range">
+                    <input type="text" class="time-input" placeholder="09:00 AM" />
+                    <span class="time-separator">to</span>
+                    <input type="text" class="time-input" placeholder="10:00 PM" />
+                  </div>
                 </div>
-              </div>
-              <!-- Tuesday -->
-              <div class="hour-row">
-                <span class="day-label">Tuesday</span>
-                <label class="switch" style="width: 36px; height: 18px;">
-                  <input type="checkbox" checked>
-                  <span class="slider" style="border-radius: 18px;"></span>
-                </label>
-                <div class="time-range">
-                  <input type="text" class="time-input" placeholder="09:00 AM" />
-                  <span class="time-separator">to</span>
-                  <input type="text" class="time-input" placeholder="10:00 PM" />
+                <!-- Tuesday -->
+                <div class="hour-row">
+                  <span class="day-label">Tuesday</span>
+                  <label class="switch" style="width: 36px; height: 18px;">
+                    <input type="checkbox" checked>
+                    <span class="slider" style="border-radius: 18px;"></span>
+                  </label>
+                  <div class="time-range">
+                    <input type="text" class="time-input" placeholder="09:00 AM" />
+                    <span class="time-separator">to</span>
+                    <input type="text" class="time-input" placeholder="10:00 PM" />
+                  </div>
                 </div>
-              </div>
-              <!-- Wednesday -->
-              <div class="hour-row">
-                <span class="day-label">Wednesday</span>
-                <label class="switch" style="width: 36px; height: 18px;">
-                  <input type="checkbox" checked>
-                  <span class="slider" style="border-radius: 18px;"></span>
-                </label>
-                <div class="time-range">
-                  <input type="text" class="time-input" placeholder="09:00 AM" />
-                  <span class="time-separator">to</span>
-                  <input type="text" class="time-input" placeholder="10:00 PM" />
+                <!-- Wednesday -->
+                <div class="hour-row">
+                  <span class="day-label">Wednesday</span>
+                  <label class="switch" style="width: 36px; height: 18px;">
+                    <input type="checkbox" checked>
+                    <span class="slider" style="border-radius: 18px;"></span>
+                  </label>
+                  <div class="time-range">
+                    <input type="text" class="time-input" placeholder="09:00 AM" />
+                    <span class="time-separator">to</span>
+                    <input type="text" class="time-input" placeholder="10:00 PM" />
+                  </div>
                 </div>
-              </div>
-              <!-- Thursday -->
-              <div class="hour-row">
-                <span class="day-label">Thursday</span>
-                <label class="switch" style="width: 36px; height: 18px;">
-                  <input type="checkbox" checked>
-                  <span class="slider" style="border-radius: 18px;"></span>
-                </label>
-                <div class="time-range">
-                  <input type="text" class="time-input" placeholder="09:00 AM" />
-                  <span class="time-separator">to</span>
-                  <input type="text" class="time-input" placeholder="10:00 PM" />
+                <!-- Thursday -->
+                <div class="hour-row">
+                  <span class="day-label">Thursday</span>
+                  <label class="switch" style="width: 36px; height: 18px;">
+                    <input type="checkbox" checked>
+                    <span class="slider" style="border-radius: 18px;"></span>
+                  </label>
+                  <div class="time-range">
+                    <input type="text" class="time-input" placeholder="09:00 AM" />
+                    <span class="time-separator">to</span>
+                    <input type="text" class="time-input" placeholder="10:00 PM" />
+                  </div>
                 </div>
-              </div>
-              <!-- Friday -->
-              <div class="hour-row">
-                <span class="day-label">Friday</span>
-                <label class="switch" style="width: 36px; height: 18px;">
-                  <input type="checkbox" checked>
-                  <span class="slider" style="border-radius: 18px;"></span>
-                </label>
-                <div class="time-range">
-                  <input type="text" class="time-input" placeholder="09:00 AM" />
-                  <span class="time-separator">to</span>
-                  <input type="text" class="time-input" placeholder="11:00 PM" />
+                <!-- Friday -->
+                <div class="hour-row">
+                  <span class="day-label">Friday</span>
+                  <label class="switch" style="width: 36px; height: 18px;">
+                    <input type="checkbox" checked>
+                    <span class="slider" style="border-radius: 18px;"></span>
+                  </label>
+                  <div class="time-range">
+                    <input type="text" class="time-input" placeholder="09:00 AM" />
+                    <span class="time-separator">to</span>
+                    <input type="text" class="time-input" placeholder="11:00 PM" />
+                  </div>
                 </div>
-              </div>
-              <!-- Saturday -->
-              <div class="hour-row">
-                <span class="day-label">Saturday</span>
-                <label class="switch" style="width: 36px; height: 18px;">
-                  <input type="checkbox" checked>
-                  <span class="slider" style="border-radius: 18px;"></span>
-                </label>
-                <div class="time-range">
-                  <input type="text" class="time-input" placeholder="10:00 AM" />
-                  <span class="time-separator">to</span>
-                  <input type="text" class="time-input" placeholder="11:00 PM" />
+                <!-- Saturday -->
+                <div class="hour-row">
+                  <span class="day-label">Saturday</span>
+                  <label class="switch" style="width: 36px; height: 18px;">
+                    <input type="checkbox" checked>
+                    <span class="slider" style="border-radius: 18px;"></span>
+                  </label>
+                  <div class="time-range">
+                    <input type="text" class="time-input" placeholder="10:00 AM" />
+                    <span class="time-separator">to</span>
+                    <input type="text" class="time-input" placeholder="11:00 PM" />
+                  </div>
                 </div>
-              </div>
-              <!-- Sunday -->
-              <div class="hour-row">
-                <span class="day-label">Sunday</span>
-                <label class="switch" style="width: 36px; height: 18px;">
-                  <input type="checkbox" checked>
-                  <span class="slider" style="border-radius: 18px;"></span>
-                </label>
-                <div class="time-range">
-                  <input type="text" class="time-input" placeholder="10:00 AM" />
-                  <span class="time-separator">to</span>
-                  <input type="text" class="time-input" placeholder="09:00 PM" />
+                <!-- Sunday -->
+                <div class="hour-row">
+                  <span class="day-label">Sunday</span>
+                  <label class="switch" style="width: 36px; height: 18px;">
+                    <input type="checkbox" checked>
+                    <span class="slider" style="border-radius: 18px;"></span>
+                  </label>
+                  <div class="time-range">
+                    <input type="text" class="time-input" placeholder="10:00 AM" />
+                    <span class="time-separator">to</span>
+                    <input type="text" class="time-input" placeholder="09:00 PM" />
+                  </div>
                 </div>
               </div>
             </div>
@@ -1391,7 +1381,6 @@
 
         <button id="final-launch-btn" class="btn-primary"
           style="margin-top: 3rem; font-size: 1rem; padding: 1.125rem;">Launch Reservation AI</button>
-        <p class="footer-hint">You can modify these settings anytime from your dashboard</p>
       </div>
     </div>
 
